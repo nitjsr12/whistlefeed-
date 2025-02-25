@@ -78,7 +78,7 @@ document.write('<script src="https://pixel.whistle.mobi/initialize_pixel.js?v=' 
                 Meta Inventories
               </h1>
               <p className="mt-4 text-white">
-                Meta integration creates a closed-loop marketing system,It's a
+                Meta integration creates a closed-loop marketing system, Its a
                 perfect blend of <br />
                 performance marketing and customer engagement that drives higher
                 ROI

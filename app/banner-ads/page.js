@@ -87,7 +87,7 @@ function Page() {
                   Standard Banner Ads
                 </h1>
                 <p className="mt-4 text-sm text-white sm:text-base">
-                  WhistleFEED's banner ads maximize visibility and <br />
+                  WhistleFEEDs banner ads maximize visibility and <br />
                   <span className="text-[#DF8600]">
                     across premium websites and apps.
                   </span>

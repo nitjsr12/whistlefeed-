@@ -83,7 +83,7 @@ function Page() {
               </h1>
               <p className="mt-4 text-white">
                 RCS Messaging Our RCS-powered channels provide direct access to
-                a built-in audience, leveraging mobile carriers' vast networks
+                a built-in audience, leveraging mobile carriers vast networks
                 instant connections with highly engaged customers
               </p>
               <div className="mt-8">

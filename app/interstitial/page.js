@@ -79,7 +79,7 @@ function Page() {
                 Interstitial Ads
               </h1>
               <p className="mt-4 text-sm text-white">
-                WhistleFEED's Interstitial ads capture user
+                WhistleFEEDs Interstitial ads capture user
                 <br /> attention & drive engagement with a call to action.
               </p>
             </div>
