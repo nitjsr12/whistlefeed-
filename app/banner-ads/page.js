@@ -80,73 +80,54 @@ function Page() {
       {/* Content */}
       <div className="relative z-0">
         {showContent && (
-          <div className="absolute right-0 z-50 flex h-screen flex-col items-center justify-center space-y-4 lg:w-8/12 lg:p-12">
-            <div className="text-center md:flex md:items-center md:space-x-8 md:text-left">
+          <div className="absolute right-0 z-50 flex h-screen flex-col items-center justify-center space-y-4 px-4 md:px-8 lg:w-8/12 lg:p-12">
+            <div className="text-center sm:pt-64 md:mt-10 md:flex md:items-center md:space-x-8 md:text-left">
               <div className="mb-8 md:mb-0">
-                <h1 className="text-4xl font-bold" style={{ color: "#DF8600" }}>
+                <h1 className="text-3xl font-bold text-[#DF8600] sm:text-4xl">
                   Standard Banner Ads
                 </h1>
-                <p className="mt-4 text-white">
-                  WhistleFEED's banner ads maximise visibility and <br></br>
-                  <span style={{ color: "#DF8600" }}>
+                <p className="mt-4 text-sm text-white sm:text-base">
+                  WhistleFEED's banner ads maximize visibility and <br />
+                  <span className="text-[#DF8600]">
                     across premium websites and apps.
                   </span>
                 </p>
-                <div className="mt-8">
-                  <h2
-                    className="text-2xl font-bold"
-                    style={{ color: "#DF8600" }}
-                  >
+                <div className="mt-6 sm:mt-8">
+                  <h2 className="text-xl font-bold text-[#DF8600] sm:text-2xl">
                     Why Choose WhistleFEED Banner Ads?
                   </h2>
                   <ul className="mt-4 space-y-4">
-                    <li className="flex items-center">
-                      <FontAwesomeIcon
-                        icon={faCheck}
-                        className="mr-2"
-                        style={{ color: "#DF8600" }}
-                      />
-                      <span className="text-white">High Visibility</span>
-                    </li>
-                    <li className="flex items-center">
-                      <FontAwesomeIcon
-                        icon={faCheck}
-                        className="mr-2"
-                        style={{ color: "#DF8600" }}
-                      />
-                      <span className="text-white">
-                        Advanced Targeting &amp; Placements
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <FontAwesomeIcon
-                        icon={faCheck}
-                        className="mr-2"
-                        style={{ color: "#DF8600" }}
-                      />
-                      <span className="text-white">Engaging Creatives</span>
-                    </li>
-                    <li className="flex items-center">
-                      <FontAwesomeIcon
-                        icon={faCheck}
-                        className="mr-2"
-                        style={{ color: "#DF8600" }}
-                      />
-                      <span className="text-white">
-                        Performance-Driven – Optimized for high CTRs
-                      </span>
-                    </li>
+                    {[
+                      "High Visibility",
+                      "Advanced Targeting & Placements",
+                      "Engaging Creatives",
+                      "Performance-Driven – Optimized for high CTRs",
+                    ].map((text, index) => (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center md:justify-start"
+                      >
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="mr-2 text-[#DF8600]"
+                        />
+                        <span className="text-sm text-white sm:text-base">
+                          {text}
+                        </span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
-              <div className="flex justify-center">
-                <div className="h-128 relative w-64">
+              <div className="flex justify-center pt-4">
+                <div className="relative h-auto w-48 sm:w-64">
                   <Image
                     alt="A mobile phone displaying an interstitial ad with a call to action button"
-                    className="rounded-lg shadow-lg"
-                    height="300"
+                    className="h-auto w-full rounded-lg shadow-lg"
                     src="/images/bannerAds.png"
-                    width="300"
+                    width={240}
+                    height={430}
+                    layout="intrinsic"
                   />
                 </div>
               </div>

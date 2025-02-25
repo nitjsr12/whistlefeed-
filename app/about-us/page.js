@@ -17,12 +17,11 @@ function Page() {
   return (
     <div className="relative z-0">
       {showContent && (
-        <div className="absolute right-0 z-50 flex min-h-screen flex-col items-center justify-center space-y-4 pt-24 lg:w-8/12 lg:p-12 lg:pt-0">
-          a{" "}
+        <div className="absolute right-0 z-50 mt-14 flex min-h-screen flex-col items-center justify-center space-y-4 pt-28 lg:w-8/12 lg:p-12 lg:pt-0">
           <div className="relative mx-auto w-full max-w-xs">
             {/* Mobile Mockup */}
             <div
-              className="relative h-[450px] w-full overflow-hidden rounded-3xl bg-cover bg-center shadow-lg"
+              className="relative h-[460px] w-full overflow-hidden rounded-3xl bg-cover bg-center shadow-lg"
               style={{
                 backgroundImage: "url('/images/Subtract.png')",
               }}
@@ -31,11 +30,12 @@ function Page() {
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                 {/* Logo */}
                 <img
+                  className="pt-2"
                   src="/images/whistlefeedlogo.png"
                   alt="WhistleFEED Logo"
                   className="mb-4 w-32"
                 />
-                <h1 className="text-3xl font-bold tracking-wide text-white">
+                <h1 className="text-2xl font-bold tracking-wide text-[#DF8600]">
                   A DSP Made in India
                 </h1>
                 {/* Swiper Text Slider */}
@@ -47,19 +47,26 @@ function Page() {
                   className="w-full"
                 >
                   <SwiperSlide>
-                    <p className="mt-4 text-sm font-bold text-orange-500">
+                    <p className="mt-6 text-sm font-bold text-white">
                       WhistleFEED is a cutting-edge programmatic ad platform
-                      made in India, empowering advertisers with data-driven
-                      optimization and programmatic solutions (Open Real Time
-                      Bidding)
+                      made in India, empowering advertisers with{" "}
+                      <span style={{ color: "#DF8600 " }}>
+                        data-driven optimization and programmatic solutions{" "}
+                      </span>{" "}
+                      (Open Real Time Bidding)
                     </p>
                   </SwiperSlide>
 
                   <SwiperSlide>
-                    <p className="mt-4 text-sm font-bold text-orange-500">
-                      With 200+ smart algorithms, our advanced technology
-                      ensures maximum reach, high-quality engagement, and
-                      superior ROI
+                    <p className="mt-4 text-sm font-bold text-white">
+                      With
+                      <span style={{ color: "#DF8600 " }}>
+                        200+ smart algorithms,
+                      </span>
+                      our advanced technology ensures{" "}
+                      <span style={{ color: "#DF8600 " }}>
+                        maximum reach, high-quality engagement, and superior ROI{" "}
+                      </span>
                     </p>
                   </SwiperSlide>
                 </Swiper>

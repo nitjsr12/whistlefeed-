@@ -14,10 +14,11 @@ function Header({ toggleLogin }) {
       ) : (
         <Link href="/">
           <Image
-            src="/images/whl-logo.png"
+            src="/images/whistlefeedlogo.png"
             width={400}
             height={400}
             className="w-28"
+            alt="WhistleFEED Logo"
           />
         </Link>
       )}
@@ -30,7 +31,7 @@ function Header({ toggleLogin }) {
         </button>
       ) : (
         <Link
-          href=""
+          href="https://whistle.mobi/"
           className="hidden rounded-full bg-wlOrange px-8 py-2 text-white lg:block"
         >
           Login
