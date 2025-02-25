@@ -5,6 +5,9 @@ import Sidebar from "@/components/Menu/SideBar";
 import Footer from "@/components/Footer/Footer";
 import { faqData } from "@/utils/data";
 import Link from "next/link";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 function Page() {
   const [videoFinished, setVideoFinished] = useState(false);
@@ -70,41 +73,54 @@ document.write('<script src="https://pixel.whistle.mobi/initialize_pixel.js?v=' 
       <div className="relative z-0">
         {showContent && (
           <div className="absolute right-0 z-50 flex min-h-screen items-center justify-center space-y-4 p-12 lg:w-8/12 lg:flex-col">
-            <div className="w-full space-y-4 rounded-lg bg-black bg-opacity-50 p-4 text-white">
-              <h1>How do we track the pixel through Whistle?</h1>
-              <p>
-                When the user clicks on the Ad, the user is then redirected to
-                the Landing Page URL used for that campaign. While redirecting
-                to the campaign URL, we generate a unique click ID for every
-                user and append that click ID to alias parameter at the end of
-                the URL (Example: &alias=aaaaaa0000. The last 10 digits here
-                denote the unique click ID)
+            <div className="mb-8 md:mb-0">
+              <h1 className="text-4xl font-bold" style={{ color: "#DF8600" }}>
+                Meta Inventories
+              </h1>
+              <p className="mt-4 text-white">
+                Meta integration creates a closed-loop marketing system,It's a
+                perfect blend of <br />
+                performance marketing and customer engagement that drives higher
+                ROI
               </p>
-              <p>
-                To track the pixel through Whistle Feed, please follow the below
-                steps:
-              </p>
-              <p>
-                <strong className="text-wlOrange">Step 1:</strong> Copy the tag
-                code and paste it between the{" "}
-                <code>&lt;head&gt;&lt;/head&gt;</code> tag of the landing page
-                that you will be using when you run your Whistle campaigns.
-              </p>
-              {/* Code Block */}
-              <pre className="overflow-x-auto rounded-lg bg-gray-800 p-4 text-white">
-                <code>{scriptCode}</code>
-              </pre>
-
-              <p>
-                <strong className="text-wlOrange">Step 2:</strong> Copy the tag
-                code and paste it between the{" "}
-                <code>&lt;head&gt;&lt;/head&gt;</code> tag of the page or action
-                button which you consider as the conversion point.
-              </p>
-              {/* Code Block */}
-              <pre className="overflow-x-auto rounded-lg bg-gray-800 p-4 text-white">
-                <code>{conversionCode}</code>
-              </pre>
+              <div className="mt-8">
+                <ul className="mt-4 space-y-4">
+                  <li className="flex items-center">
+                    <FontAwesomeIcon
+                      icon={faCheck}
+                      className="mr-2"
+                      style={{ color: "#DF8600" }}
+                    />
+                    <span className="text-white">
+                      Automated Lead Collection
+                    </span>
+                  </li>
+                  <li className="flex items-center">
+                    <FontAwesomeIcon
+                      icon={faCheck}
+                      className="mr-2"
+                      style={{ color: "#DF8600" }}
+                    />
+                    <span className="text-white">Personalised Ads</span>
+                  </li>
+                  <li className="flex items-center">
+                    <FontAwesomeIcon
+                      icon={faCheck}
+                      className="mr-2"
+                      style={{ color: "#DF8600" }}
+                    />
+                    <span className="text-white">Behavioural Analyis </span>
+                  </li>
+                  <li className="flex items-center">
+                    <FontAwesomeIcon
+                      icon={faCheck}
+                      className="mr-2"
+                      style={{ color: "#DF8600" }}
+                    />
+                    <span className="text-white">Cross platform Insights</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         )}

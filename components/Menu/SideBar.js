@@ -6,28 +6,26 @@ import { usePathname } from "next/navigation";
 const CircularMenu = ({ isHomepage, footer }) => {
   const pathname = usePathname();
   const circleRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(null); // Track the active menu index
+  const [activeIndex, setActiveIndex] = useState(null);
   const radiusMultiplier = 0.4;
-  const totalArea = 90; // Half-circle area in degrees
+  const totalArea = 90;
 
   useEffect(() => {
     if (!isHomepage) {
       const windowHeight = window.innerHeight || 238;
       const radius = windowHeight * radiusMultiplier;
       const increment = totalArea / (menuItems.length - 1);
-      const startPoint = totalArea / 2; // Adjust to start at the top and go clockwise
+      const startPoint = totalArea / 2;
 
-      // Style the circle
       const circle = circleRef.current;
       if (circle) {
         circle.style.width = `${radius}px`;
         circle.style.height = `${radius}px`;
       }
 
-      // Style the links dynamically
       menuItems.forEach((item, index) => {
         const element = document.getElementById(`link-${index}`);
-        const angle = startPoint - index * increment; // Adjust angle calculation
+        const angle = startPoint - index * increment;
         const x = radius * Math.cos((angle * Math.PI) / 180);
         const y = radius * Math.sin((angle * Math.PI) / 180);
 
@@ -36,16 +34,14 @@ const CircularMenu = ({ isHomepage, footer }) => {
           element.style.left = `${radius + x}px`;
           element.style.top = `${radius - y}px`;
           element.style.color = "white";
+          element.style.transition = "color 0.3s ease";
 
-          // Hover Effects
           element.onmouseover = () => {
-            element.style.transform = "translateY(-5px)";
-            element.style.opacity = "0.8";
+            element.style.color = "#FFA500"; // Change text color on hover
           };
 
           element.onmouseout = () => {
-            element.style.transform = "translateY(0)";
-            element.style.opacity = "1";
+            element.style.color = "white";
           };
         }
       });
@@ -53,22 +49,23 @@ const CircularMenu = ({ isHomepage, footer }) => {
   }, [isHomepage]);
 
   const handleMenuClick = (index) => {
-    setActiveIndex(index); // Set the clicked menu item as active
+    setActiveIndex(index);
   };
 
   if (isHomepage && !footer) {
-    // Render a vertical menu for the homepage
     return (
-      <div className="absolute left-0 top-0 z-40 hidden h-screen items-center justify-center gap-4 lg:flex">
-        <ul className="gap-4 space-y-4 p-6">
+      <div className="absolute left-0 top-0 z-40 hidden h-screen items-center justify-center lg:flex">
+        <ul className="flex flex-col gap-6 p-6">
           {menuItems.map((item, index) => (
             <li
               key={index}
-              className={`w-full translate-y-5 animate-fade-up space-y-4 rounded-full p-2 text-white opacity-0 hover:bg-wlOrange ${
-                index + 1 * 100
-              } ${activeIndex === index ? "bg-wlOrange" : ""}`} // Highlight active menu
+              className={`text-white transition-all duration-300 ${
+                activeIndex === index || pathname === item.url
+                  ? "text-wlOrange"
+                  : ""
+              }`}
               style={{ animationDelay: `${index * 200}ms` }}
-              onClick={() => handleMenuClick(index)} // Set active menu on click
+              onClick={() => handleMenuClick(index)}
             >
               <Link href={item.url}>{item.label}</Link>
             </li>
@@ -78,21 +75,24 @@ const CircularMenu = ({ isHomepage, footer }) => {
     );
   }
 
-  // Render the circular menu for other pages
   return (
-    <div className="absolute -left-[380px] top-[80px] z-40 hidden items-center justify-center gap-4 lg:block">
+    <div className="absolute -left-[240px] top-[80px] z-40 hidden items-center justify-center lg:block">
       {menuItems.map((item, index) => (
         <Link
           key={index}
           id={`link-${index}`}
           href={item.url}
-          className={`w-[180px] translate-y-5 animate-fade-up space-y-4 rounded-full p-2 text-white opacity-0 hover:bg-wlOrange ${pathname === item.url ? "bg-wlOrange" : ""} ${
-            activeIndex === index ? "bg-wlOrange" : ""
-          }`} // Highlight active menu
+          className={`w-[180px] text-white transition-all duration-300 ${
+            pathname === item.url || activeIndex === index
+              ? "text-wlOrange"
+              : ""
+          }`}
           style={{
             animationDelay: `${index * 200}ms`,
+            marginBottom: "16px", // Adding gap between menu items
+            display: "block",
           }}
-          onClick={() => handleMenuClick(index)} // Set active menu on click
+          onClick={() => handleMenuClick(index)}
         >
           {item.label}
         </Link>

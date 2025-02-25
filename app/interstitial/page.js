@@ -4,7 +4,7 @@ import Header from "@/components/Common/Header";
 import Sidebar from "@/components/Menu/SideBar";
 import SideMenu from "@/components/Menu/Menu";
 import Footer from "@/components/Footer/Footer";
-import Slider from "@/components/Slider";
+import Image from "next/image";
 
 function Page() {
   const [videoFinished, setVideoFinished] = useState(false);
@@ -15,17 +15,17 @@ function Page() {
 
   const [showContent, setShowContent] = useState(false); // State for controlling sidebar visibility
 
-  // useEffect(() => {
-  //     setTimeout(() => {
-  //       setShowContent(true); // Show Sidebar with animation
-  //     }, 4000); // Delay for smooth effect
-  // });
+  useEffect(() => {
+    setTimeout(() => {
+      setShowContent(true); // Show Sidebar with animation
+    }, 4000); // Delay for smooth effect
+  });
 
   // Show Sidebar with smooth transition after Login
   useEffect(() => {
     setTimeout(() => {
       setShowContent(true); // Show Sidebar with animation
-    }, 5000); // Delay for smooth effect
+    }, 4000); // Delay for smooth effect
 
     setTimeout(() => {
       setShowSidebar(true); // Show Sidebar with animation
@@ -52,10 +52,7 @@ function Page() {
         muted
         onEnded={handleVideoEnd} // Trigger when intro video finishes
       >
-        <source
-          src="/video/Millenium_Falcon_Earth_Static.webm"
-          type="video/webm"
-        />
+        <source src="/video/Earth_Side_Rotation.webm" type="video/webm" />
       </video>
 
       {/* Background Video (Rotation, Looping) */}
@@ -75,8 +72,29 @@ function Page() {
       {/* Content */}
       {/* Content */}
       {showContent && (
-        <div className="absolute right-0 z-50 flex h-screen w-8/12 flex-col items-center justify-center space-y-4 p-12 transition-all ease-in-out">
-          <Slider />
+        <div className="absolute right-0 z-50 flex h-screen w-full flex-col items-center justify-center space-y-4 transition-all ease-in-out lg:w-8/12 lg:p-12 ">
+          <div className="text-center md:flex md:items-center md:space-x-8 md:text-left">
+            <div className="mb-8 md:mb-0">
+              <h1 className="text-3xl font-bold text-[#DF8600]">
+                Interstitial Ads
+              </h1>
+              <p className="mt-4 text-sm text-white">
+                WhistleFEED's Interstitial ads capture user
+                <br /> attention & drive engagement with a call to action.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="h-128 relative w-64">
+                <Image
+                  alt="A mobile phone displaying an interstitial ad with a call to action button"
+                  className="rounded-lg shadow-lg"
+                  height="300"
+                  src="/images/incial.png"
+                  width="300"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       )}
 
@@ -92,4 +110,5 @@ function Page() {
     </div>
   );
 }
+
 export default Page;

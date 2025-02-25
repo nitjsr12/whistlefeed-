@@ -103,7 +103,7 @@ const App = () => {
         </div>
 
         {/* Render Login after Lottie animation completes */}
-        {showLogin && <Login />}
+        {showLogin}
 
         {/* Smooth transition Sidebar after Login */}
       </div>

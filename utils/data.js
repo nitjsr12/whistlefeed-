@@ -7,28 +7,40 @@ export const menuItems = [
     url: "/about-us",
   },
   {
-    label: "Messaging Services",
-    url: "/messaging-services",
+    label: "USPS",
+    url: "/usps",
   },
   {
-    label: "Product Features",
-    url: "/product-features",
+    label: "Banner Ads",
+    url: "/banner-ads",
   },
   {
-    label: "Press Releases",
-    url: "/press-releases",
+    label: "Interstitial",
+    url: "/interstitial",
   },
   {
-    label: "FAQs",
-    url: "/faqs",
+    label: "Text Ads",
+    url: "/text-ads",
   },
   {
-    label: "Case Studies",
-    url: "/case-study",
+    label: "Video Ads",
+    url: "/video-ads",
   },
   {
-    label: "Tracking Pixel",
-    url: "/track-conversion",
+    label: "OEM & Keyboards",
+    url: "/oem-&-keyboards",
+  },
+  {
+    label: "Meta Inventories",
+    url: "meta-inventories",
+  },
+  {
+    label: "RCS",
+    url: "/rcs",
+  },
+  {
+    label: "Gallery",
+    url: "/gallery",
   },
   {
     label: "Contact Us",
