@@ -74,7 +74,7 @@ function Page() {
       {/* Content */}
       {/* Content */}
       {showContent && (
-        <div className="absolute right-0 z-50 flex h-screen flex-col items-center justify-center space-y-4 text-white transition-all ease-in-out lg:w-8/12 lg:p-12">
+        <div className="right-0 z-50 mt-14 flex min-h-screen flex-col items-center justify-center space-y-4 pt-28 lg:absolute lg:w-8/12 lg:p-12 lg:pt-0">
           <ImageSlider />
         </div>
       )}

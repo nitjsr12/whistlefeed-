@@ -80,8 +80,8 @@ function Page() {
       {/* Content */}
       <div className="relative z-0">
         {showContent && (
-          <div className="absolute right-0 z-50 flex h-screen flex-col items-center justify-center space-y-4 px-4 md:px-8 lg:w-8/12 lg:p-12">
-            <div className="text-center sm:pt-64 md:mt-10 md:flex md:items-center md:space-x-8 md:text-left">
+          <div className="absolute right-0 z-10 mt-14 flex min-h-screen w-full flex-col items-center justify-center space-y-4 p-6 pt-28 md:z-auto  md:w-10/12 lg:z-50 lg:w-8/12 lg:p-12 lg:pt-0">
+            <div className="text-center sm:px-9 md:mt-10 md:flex md:items-center md:space-x-8 md:px-9 md:text-left">
               <div className="mb-8 md:mb-0">
                 <h1 className="text-3xl font-bold text-[#DF8600] sm:text-4xl">
                   Standard Banner Ads
@@ -123,7 +123,7 @@ function Page() {
                 <div className="relative h-auto w-48 sm:w-64">
                   <Image
                     alt="A mobile phone displaying an interstitial ad with a call to action button"
-                    className="h-auto w-full rounded-lg shadow-lg"
+                    className="h-auto w-full rounded-lg shadow-lg md:h-6"
                     src="/images/bannerAds.png"
                     width={240}
                     height={430}

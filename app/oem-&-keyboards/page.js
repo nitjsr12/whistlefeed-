@@ -76,7 +76,7 @@ function Page() {
       {/* Content */}
       {/* Content */}
       {showContent && (
-        <div className="absolute right-0 z-50 flex h-screen w-8/12 flex-col items-center justify-center space-y-4 p-12 transition-all ease-in-out">
+        <div className="absolute right-0 z-10 mt-14 flex min-h-screen w-full flex-col items-center justify-center space-y-4 p-6 pt-28 md:z-auto  md:w-10/12 lg:z-50 lg:w-8/12 lg:p-12 lg:pt-0">
           <div className="text-center md:flex md:items-center md:space-x-8 md:text-left">
             <div className="mb-8 md:mb-0">
               <h1 className="text-4xl font-bold" style={{ color: "#DF8600" }}>

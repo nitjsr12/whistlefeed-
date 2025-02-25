@@ -70,9 +70,12 @@ document.write('<script src="https://pixel.whistle.mobi/initialize_pixel.js?v=' 
       {/* Content */}
       <div className="relative z-0">
         {showContent && (
-          <div className="absolute right-0 z-50 flex min-h-screen items-center justify-center space-y-4 p-12 lg:w-8/12 lg:flex-col">
+          <div className="right-0 z-50 mt-14 flex min-h-screen flex-col items-center justify-center space-y-4 pt-28 lg:absolute lg:w-8/12 lg:p-12 lg:pt-0">
             <div className="mb-8 md:mb-0">
-              <h1 className="text-4xl font-bold" style={{ color: "#DF8600" }}>
+              <h1
+                className="text-center text-4xl font-bold"
+                style={{ color: "#DF8600" }}
+              >
                 Discuss Unlimited Communication <br />
                 <span className="inline-block w-full text-center">
                   Solutions!
