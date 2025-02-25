@@ -75,8 +75,8 @@ function Page() {
       {/* Content */}
 
       {showContent && (
-        <div className="right-0 z-50 mt-14 flex min-h-screen flex-col items-center justify-center space-y-4 pt-28 lg:absolute lg:w-8/12 lg:p-12 lg:pt-0">
-          <div className="text-center md:flex md:items-center md:space-x-8 md:text-left">
+        <div className="relative flex min-h-screen flex-col items-center justify-center space-y-4 overflow-auto pt-28 lg:z-50 lg:w-8/12 lg:p-12 lg:pt-0">
+          <div className="p-4 text-center md:flex md:items-center md:space-x-8 md:text-left">
             <div className="mb-8 md:mb-0">
               <h1 className="text-4xl font-bold" style={{ color: "#DF8600" }}>
                 Text Ads-
@@ -95,7 +95,6 @@ function Page() {
                       style={{ color: "#DF8600" }}
                     />
                     <span className="text-white">
-                      {" "}
                       “Share” & “Like” CTAs to amplify user interactions
                     </span>
                   </li>
@@ -122,14 +121,14 @@ function Page() {
                 </ul>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="h-128 relative w-64">
+            <div className="flex w-full justify-center">
+              <div className="relative h-auto w-64">
                 <Image
                   alt="A mobile phone displaying an interstitial ad with a call to action button"
                   className="rounded-lg shadow-lg"
-                  height="300"
+                  height={300}
                   src="/images/textad.png"
-                  width="300"
+                  width={300}
                 />
               </div>
             </div>
