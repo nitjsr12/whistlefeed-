@@ -75,61 +75,63 @@ function Page() {
       {/* Content */}
 
       {showContent && (
-        <div className="absolute right-0 z-50 flex h-screen w-8/12 flex-col items-center justify-center space-y-4 p-12 transition-all ease-in-out">
-          <div className="text-center md:flex md:items-center md:space-x-8 md:text-left">
-            <div className="mb-8 md:mb-0">
-              <h1 className="text-4xl font-bold" style={{ color: "#DF8600" }}>
+        <div className="absolute right-0 z-10 mt-14 flex min-h-screen w-full flex-col items-center justify-center space-y-4 p-6 pt-28 md:z-auto  md:w-10/12 lg:z-50 lg:w-8/12 lg:p-12 lg:pt-0">
+          <div className="flex flex-col items-center text-center md:flex-row md:items-center md:space-x-8 md:text-left">
+            {/* Left Content Section */}
+            <div className="mb-8 w-full md:mb-0">
+              <h1
+                className="text-3xl font-bold sm:text-4xl"
+                style={{ color: "#DF8600" }}
+              >
                 RCS Messaging
               </h1>
-              <p className="mt-4 text-white">
+              <p className="mt-4 px-4 text-white md:px-0">
                 RCS Messaging Our RCS-powered channels provide direct access to
                 a built-in audience, leveraging mobile carriers vast networks
-                instant connections with highly engaged customers
+                for instant connections with highly engaged customers.
               </p>
+
+              {/* Why RCS Section */}
               <div className="mt-8">
-                <h2 className="text-2xl font-bold" style={{ color: "#ffff" }}>
-                  Why RCS?
-                </h2>
+                <h2 className="text-2xl font-bold text-white">Why RCS?</h2>
                 <ul className="mt-4 space-y-4">
-                  <li className="flex items-center">
+                  <li className="flex items-center justify-center md:justify-start">
                     <FontAwesomeIcon
                       icon={faCheck}
-                      className="mr-2"
-                      style={{ color: "#DF8600" }}
+                      className="mr-2 text-[#DF8600]"
                     />
                     <span className="text-white">
-                      {" "}
-                      “ Hyper-Personalized Messaging
+                      Hyper-Personalized Messaging
                     </span>
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center justify-center md:justify-start">
                     <FontAwesomeIcon
                       icon={faCheck}
-                      className="mr-2"
-                      style={{ color: "#DF8600" }}
+                      className="mr-2 text-[#DF8600]"
                     />
                     <span className="text-white">
                       Geo-Targeting & Localization
                     </span>
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center justify-center md:justify-start">
                     <FontAwesomeIcon
                       icon={faCheck}
-                      className="mr-2"
-                      style={{ color: "#DF8600" }}
+                      className="mr-2 text-[#DF8600]"
                     />
                     <span className="text-white">
-                      Advanced Performance Insights{" "}
+                      Advanced Performance Insights
                     </span>
                   </li>
                 </ul>
-                <p className="mt-4 rounded-lg border-2 border-[#DF8600] p-4  text-white">
-                  “RCS isn’t just messaging it is Conversational Commerce”
+                <p className="mt-4 rounded-lg border-2 border-[#DF8600] p-4 text-white">
+                  “RCS is not just messaging, it is Conversational Commerce.”
                 </p>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="h-128 relative w-64">
+
+            {/* Image Section */}
+            <div className="flex w-full justify-center md:w-auto">
+              <div className="relative h-auto w-48 sm:w-56 md:w-64">
                 <Image
                   alt="A mobile phone displaying an interstitial ad with a call to action button"
                   className="rounded-lg shadow-lg"
